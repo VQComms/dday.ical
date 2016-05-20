@@ -5,6 +5,7 @@ using System.Text;
 using System.Runtime.Serialization;
 using System.IO;
 using DDay.iCal.Serialization.iCalendar;
+using System.Net.Http;
 
 namespace DDay.iCal
 {
@@ -14,7 +15,7 @@ namespace DDay.iCal
 #if !SILVERLIGHT
     [Serializable]
 #endif
-    public class Attachment : 
+    public class Attachment :
         EncodableDataType,
         IAttachment
     {
@@ -28,7 +29,7 @@ namespace DDay.iCal
 
         #region Constructors
 
-        public Attachment() 
+        public Attachment()
         {
             Initialize();
         }
@@ -76,7 +77,7 @@ namespace DDay.iCal
                 for (int i = 0; i < Data.Length; i++)
                     if (Data[i] != a.Data[i])
                         return false;
-                return true;                
+                return true;
             }
             return base.Equals(obj);
         }
@@ -89,7 +90,7 @@ namespace DDay.iCal
                 return Data.GetHashCode();
             return base.GetHashCode();
         }
-      
+
         public override void CopyFrom(ICopyable obj)
         {
             base.CopyFrom(obj);
@@ -143,7 +144,7 @@ namespace DDay.iCal
             {
                 if (value != null)
                     Data = m_Encoding.GetBytes(value);
-                else                    
+                else
                     Data = null;
             }
         }
@@ -183,21 +184,26 @@ namespace DDay.iCal
         /// <param name="password">The pasword to supply for credentials</param>
         virtual public void LoadDataFromUri(Uri uri, string username, string password)
         {
-            using (WebClient client = new WebClient())
+            var handler = new HttpClientHandler();
+            var client = new HttpClient();
+
+            if (username != null && password != null)
             {
-                if (username != null &&
-                    password != null)
-                    client.Credentials = new System.Net.NetworkCredential(username, password);
-
-                if (uri == null)
-                {
-                    if (Uri == null)
-                        throw new ArgumentException("A URI was not provided for the LoadDataFromUri() method");
-                    uri = new Uri(Uri.OriginalString);
-                }
-
-                Data = client.DownloadData(uri);
+                handler = new HttpClientHandler() { Credentials = new NetworkCredential(username, password) };
+                client = new HttpClient(handler);
             }
+
+            if (uri == null)
+            {
+                if (Uri == null)
+                    throw new ArgumentException("A URI was not provided for the LoadDataFromUri() method");
+                uri = new Uri(Uri.OriginalString);
+            }
+
+            Data = client.GetByteArrayAsync(uri).Result;
+
+            handler.Dispose();
+            client.Dispose();
         }
 
         #endregion

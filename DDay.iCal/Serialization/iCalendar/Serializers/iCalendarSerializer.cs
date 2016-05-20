@@ -100,7 +100,7 @@ namespace DDay.iCal.Serialization.iCalendar
                 IICalendarCollection iCalendars = parser.icalendar(SerializationContext);
 
                 // Close our text stream
-                tr.Close();
+                tr.Dispose();
 
                 // Return the parsed iCalendar(s)
                 return iCalendars;

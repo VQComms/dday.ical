@@ -137,8 +137,9 @@ namespace DDay.iCal
                 // Copy/clone the object if possible (deep copy)
                 if (p.Values is ICopyable)
                     SetValue(((ICopyable)p.Values).Copy<object>());
-                else if (p.Values is ICloneable)
-                    SetValue(((ICloneable)p.Values).Clone());
+                //TODO: CORECLR
+                //else if (p.Values is ICloneable)
+                    //SetValue(((ICloneable)p.Values).Clone());
                 else
                     SetValue(p.Values);
 

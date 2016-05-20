@@ -62,7 +62,7 @@ namespace DDay.iCal.Serialization.iCalendar
             ICalendarParameter p = parser.parameter(ctx, null);
 
             // Close our text stream
-            tr.Close();
+            tr.Dispose();
 
             // Return the parsed parameter
             return p;

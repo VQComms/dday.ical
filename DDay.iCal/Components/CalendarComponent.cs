@@ -68,7 +68,7 @@ namespace DDay.iCal
         static public ICalendarComponent LoadFromStream(TextReader tr)
         {
             string text = tr.ReadToEnd();
-            tr.Close();
+            tr.Dispose();
 
             byte[] memoryBlock = Encoding.UTF8.GetBytes(text);
             MemoryStream ms = new MemoryStream(memoryBlock);

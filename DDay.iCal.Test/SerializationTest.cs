@@ -43,7 +43,7 @@ namespace DDay.iCal.Test
 
             FileStream fs = new FileStream(@"Calendars\Serialization\Temp\" + Path.GetFileNameWithoutExtension(filename) + "_Serialized" + Path.GetExtension(filename), FileMode.Create, FileAccess.Write);
             serializer.Serialize(iCal1, fs, Encoding.UTF8);
-            fs.Close();
+            fs.Dispose();
 
             IICalendar iCal2 = iCalendar.LoadFromFile(@"Calendars\Serialization\Temp\" + Path.GetFileNameWithoutExtension(filename) + "_Serialized" + Path.GetExtension(filename), Encoding.UTF8, serializer)[0];
 
@@ -844,13 +844,13 @@ namespace DDay.iCal.Test
 
             FileStream fs = new FileStream(@"Calendars\Serialization\Event6.ics", FileMode.Create, FileAccess.Write);
             eventSerializer.Serialize(evt, fs, Encoding.UTF8);
-            fs.Close();
+            fs.Dispose();
 
             iCalendar iCal1 = new iCalendar();
 
             fs = new FileStream(@"Calendars\Serialization\Event6.ics", FileMode.Open, FileAccess.Read);
             Event evt1 = CalendarComponent.LoadFromStream<Event>(fs, Encoding.UTF8);
-            fs.Close();
+            fs.Dispose();
 
             CompareComponents(evt, evt1);
         }

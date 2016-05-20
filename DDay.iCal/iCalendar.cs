@@ -267,17 +267,17 @@ namespace DDay.iCal
         }
 
 #if !SILVERLIGHT
-        static public IICalendarCollection LoadFromUri(Uri uri, WebProxy proxy)
+        static public IICalendarCollection LoadFromUri(Uri uri, IWebProxy proxy)
         {
             return LoadFromUri(typeof(iCalendar), uri, null, null, proxy);
         }
 
-        static public IICalendarCollection LoadFromUri<T>(Uri uri, WebProxy proxy)
+        static public IICalendarCollection LoadFromUri<T>(Uri uri, IWebProxy proxy)
         {
             return LoadFromUri(typeof(T), uri, null, null, proxy);
         }
 
-        static public IICalendarCollection LoadFromUri(Type iCalendarType, Uri uri, WebProxy proxy)
+        static public IICalendarCollection LoadFromUri(Type iCalendarType, Uri uri, IWebProxy proxy)
         {
             return LoadFromUri(iCalendarType, uri, null, null, proxy);
         }
@@ -310,7 +310,7 @@ namespace DDay.iCal
         }
 
 #if !SILVERLIGHT
-        static public IICalendarCollection LoadFromUri(Uri uri, string username, string password, WebProxy proxy)
+        static public IICalendarCollection LoadFromUri(Uri uri, string username, string password, IWebProxy proxy)
         {
             return LoadFromUri(typeof(iCalendar), uri, username, password, proxy);
         }
@@ -318,12 +318,12 @@ namespace DDay.iCal
 
         #endregion
 
-        #region LoadFromUri(Type iCalendarType, Uri uri, string username, string password, WebProxy proxy)
+        #region LoadFromUri(Type iCalendarType, Uri uri, string username, string password, IWebProxy proxy)
 
 #if SILVERLIGHT
         static public IICalendarCollection LoadFromUri(Type iCalendarType, Uri uri, string username, string password, object unusedProxy)
 #else
-        static public IICalendarCollection LoadFromUri(Type iCalendarType, Uri uri, string username, string password, WebProxy proxy)
+        static public IICalendarCollection LoadFromUri(Type iCalendarType, Uri uri, string username, string password, IWebProxy proxy)
 #endif
         {
             try

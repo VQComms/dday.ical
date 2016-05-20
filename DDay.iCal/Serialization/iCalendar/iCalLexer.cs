@@ -91,7 +91,7 @@ namespace DDay.iCal
 		{
 			caseSensitiveLiterals = true;
 			setCaseSensitive(true);
-			literals = new Hashtable(100, (float) 0.4, null, Comparer.Default);
+			literals = new Hashtable(100, (float) 0.4);
 		}
 		
 		override public IToken nextToken()			//throws TokenStreamException
