@@ -1,0 +1,558 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C545F688-AB56-442C-99E0-5C9AA7214F55}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DDay.iCal</RootNamespace>
+    <AssemblyName>DDay.iCal</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETCORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETCORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\DDay.iCal\Compatibility\BrowsableAttribute.cs">
+      <Link>Compatibility\BrowsableAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Compatibility\DebuggerDisplayAttribute.cs">
+      <Link>Compatibility\DebuggerDisplayAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Components\Alarm.cs">
+      <Link>Components\Alarm.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Components\CalendarComponent.cs">
+      <Link>Components\CalendarComponent.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Components\Event.cs">
+      <Link>Components\Event.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Components\FreeBusy.cs">
+      <Link>Components\FreeBusy.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Components\iCalTimeZone.cs">
+      <Link>Components\iCalTimeZone.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Components\iCalTimeZoneInfo.cs">
+      <Link>Components\iCalTimeZoneInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Components\Journal.cs">
+      <Link>Components\Journal.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Components\RecurringComponent.cs">
+      <Link>Components\RecurringComponent.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Components\Todo.cs">
+      <Link>Components\Todo.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Components\UniqueComponent.cs">
+      <Link>Components\UniqueComponent.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Constants.cs">
+      <Link>Constants.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\DataTypes\Attachment.cs">
+      <Link>DataTypes\Attachment.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\DataTypes\Attendee.cs">
+      <Link>DataTypes\Attendee.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\DataTypes\CalendarDataType.cs">
+      <Link>DataTypes\CalendarDataType.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\DataTypes\EncodableDataType.cs">
+      <Link>DataTypes\EncodableDataType.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\DataTypes\FreeBusyEntry.cs">
+      <Link>DataTypes\FreeBusyEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\DataTypes\GeographicLocation.cs">
+      <Link>DataTypes\GeographicLocation.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\DataTypes\iCalDateTime.cs">
+      <Link>DataTypes\iCalDateTime.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\DataTypes\IGroupedCollection.cs">
+      <Link>DataTypes\IGroupedCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\DataTypes\Organizer.cs">
+      <Link>DataTypes\Organizer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\DataTypes\Period.cs">
+      <Link>DataTypes\Period.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\DataTypes\PeriodList.cs">
+      <Link>DataTypes\PeriodList.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\DataTypes\RecurrencePattern.cs">
+      <Link>DataTypes\RecurrencePattern.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\DataTypes\RequestStatus.cs">
+      <Link>DataTypes\RequestStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\DataTypes\StatusCode.cs">
+      <Link>DataTypes\StatusCode.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\DataTypes\Trigger.cs">
+      <Link>DataTypes\Trigger.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\DataTypes\UTCOffset.cs">
+      <Link>DataTypes\UTCOffset.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\DataTypes\WeekDay.cs">
+      <Link>DataTypes\WeekDay.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Evaluation\Evaluator.cs">
+      <Link>Evaluation\Evaluator.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Evaluation\EventEvaluator.cs">
+      <Link>Evaluation\EventEvaluator.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Evaluation\PeriodListEvaluator.cs">
+      <Link>Evaluation\PeriodListEvaluator.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Evaluation\RecurrencePatternEvaluator.cs">
+      <Link>Evaluation\RecurrencePatternEvaluator.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Evaluation\RecurringEvaluator.cs">
+      <Link>Evaluation\RecurringEvaluator.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Evaluation\TimeZoneEvaluator.cs">
+      <Link>Evaluation\TimeZoneEvaluator.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Evaluation\TimeZoneInfoEvaluator.cs">
+      <Link>Evaluation\TimeZoneInfoEvaluator.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Evaluation\TodoEvaluator.cs">
+      <Link>Evaluation\TodoEvaluator.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Exceptions\EvaluationEngineException.cs">
+      <Link>Exceptions\EvaluationEngineException.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\ExtensionMethods\CalendarObjectExtensions.cs">
+      <Link>ExtensionMethods\CalendarObjectExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\ExtensionMethods\ListExtensions.cs">
+      <Link>ExtensionMethods\ListExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Factory\UIDFactory.cs">
+      <Link>Factory\UIDFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\General\CalendarObject.cs">
+      <Link>General\CalendarObject.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\General\CalendarObjectBase.cs">
+      <Link>General\CalendarObjectBase.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\General\CalendarObjectList.cs">
+      <Link>General\CalendarObjectList.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\General\CalendarParameter.cs">
+      <Link>General\CalendarParameter.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\General\CalendarParameterList.cs">
+      <Link>General\CalendarParameterList.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\General\CalendarProperty.cs">
+      <Link>General\CalendarProperty.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\General\CalendarPropertyList.cs">
+      <Link>General\CalendarPropertyList.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\General\Proxies\CalendarObjectListProxy.cs">
+      <Link>General\Proxies\CalendarObjectListProxy.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\General\Proxies\CalendarParameterCollectionProxy.cs">
+      <Link>General\Proxies\CalendarParameterCollectionProxy.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\General\Proxies\UniqueComponentListProxy.cs">
+      <Link>General\Proxies\UniqueComponentListProxy.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\General\ServiceProvider.cs">
+      <Link>General\ServiceProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\iCalendar.cs">
+      <Link>iCalendar.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\iCalendarCollection.cs">
+      <Link>iCalendarCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\Components\IAlarm.cs">
+      <Link>Interfaces\Components\IAlarm.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\Components\IAlarmContainer.cs">
+      <Link>Interfaces\Components\IAlarmContainer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\Components\ICalendarComponent.cs">
+      <Link>Interfaces\Components\ICalendarComponent.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\Components\IEvent.cs">
+      <Link>Interfaces\Components\IEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\Components\IFreeBusy.cs">
+      <Link>Interfaces\Components\IFreeBusy.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\Components\IJournal.cs">
+      <Link>Interfaces\Components\IJournal.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\Components\IRecurringComponent.cs">
+      <Link>Interfaces\Components\IRecurringComponent.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\Components\ITimeZone.cs">
+      <Link>Interfaces\Components\ITimeZone.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\Components\ITimeZoneInfo.cs">
+      <Link>Interfaces\Components\ITimeZoneInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\Components\ITodo.cs">
+      <Link>Interfaces\Components\ITodo.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\Components\IUniqueComponent.cs">
+      <Link>Interfaces\Components\IUniqueComponent.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\DataTypes\IAttachment.cs">
+      <Link>Interfaces\DataTypes\IAttachment.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\DataTypes\IAttendee.cs">
+      <Link>Interfaces\DataTypes\IAttendee.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\DataTypes\ICalendarDataType.cs">
+      <Link>Interfaces\DataTypes\ICalendarDataType.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\DataTypes\IDateTime.cs">
+      <Link>Interfaces\DataTypes\IDateTime.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\DataTypes\IEncodableDataType.cs">
+      <Link>Interfaces\DataTypes\IEncodableDataType.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\DataTypes\IFreeBusyEntry.cs">
+      <Link>Interfaces\DataTypes\IFreeBusyEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\DataTypes\IGeographicLocation.cs">
+      <Link>Interfaces\DataTypes\IGeographicLocation.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\DataTypes\IOrganizer.cs">
+      <Link>Interfaces\DataTypes\IOrganizer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\DataTypes\IPeriod.cs">
+      <Link>Interfaces\DataTypes\IPeriod.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\DataTypes\IPeriodList.cs">
+      <Link>Interfaces\DataTypes\IPeriodList.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\DataTypes\IRecurrencePattern.cs">
+      <Link>Interfaces\DataTypes\IRecurrencePattern.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\DataTypes\IRequestStatus.cs">
+      <Link>Interfaces\DataTypes\IRequestStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\DataTypes\IStatusCode.cs">
+      <Link>Interfaces\DataTypes\IStatusCode.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\DataTypes\ITrigger.cs">
+      <Link>Interfaces\DataTypes\ITrigger.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\DataTypes\IUTCOffset.cs">
+      <Link>Interfaces\DataTypes\IUTCOffset.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\DataTypes\IWeekDay.cs">
+      <Link>Interfaces\DataTypes\IWeekDay.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\Evaluation\IEvaluator.cs">
+      <Link>Interfaces\Evaluation\IEvaluator.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\Evaluation\IGetFreeBusy.cs">
+      <Link>Interfaces\Evaluation\IGetFreeBusy.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\Evaluation\IGetOccurrences.cs">
+      <Link>Interfaces\Evaluation\IGetOccurrences.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\Evaluation\IRecurrable.cs">
+      <Link>Interfaces\Evaluation\IRecurrable.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\General\ICalendarObject.cs">
+      <Link>Interfaces\General\ICalendarObject.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\General\ICalendarObjectList.cs">
+      <Link>Interfaces\General\ICalendarObjectList.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\General\ICalendarParameter.cs">
+      <Link>Interfaces\General\ICalendarParameter.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\General\ICalendarParameterCollection.cs">
+      <Link>Interfaces\General\ICalendarParameterCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\General\ICalendarParameterCollectionContainer.cs">
+      <Link>Interfaces\General\ICalendarParameterCollectionContainer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\General\ICalendarProperty.cs">
+      <Link>Interfaces\General\ICalendarProperty.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\General\ICalendarPropertyList.cs">
+      <Link>Interfaces\General\ICalendarPropertyList.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\General\ICalendarPropertyListContainer.cs">
+      <Link>Interfaces\General\ICalendarPropertyListContainer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\General\ICopyable.cs">
+      <Link>Interfaces\General\ICopyable.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\General\ILoadable.cs">
+      <Link>Interfaces\General\ILoadable.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\General\IMergeable.cs">
+      <Link>Interfaces\General\IMergeable.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\General\IServiceProvider.cs">
+      <Link>Interfaces\General\IServiceProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\General\IUniqueComponentList.cs">
+      <Link>Interfaces\General\IUniqueComponentList.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\General\Proxies\ICalendarParameterCollectionProxy.cs">
+      <Link>Interfaces\General\Proxies\ICalendarParameterCollectionProxy.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\IICalendar.cs">
+      <Link>Interfaces\IICalendar.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\IICalendarCollection.cs">
+      <Link>Interfaces\IICalendarCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\Serialization\Factory\ICalendarComponentFactory.cs">
+      <Link>Interfaces\Serialization\Factory\ICalendarComponentFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\Serialization\Factory\ISerializerFactory.cs">
+      <Link>Interfaces\Serialization\Factory\ISerializerFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\Serialization\IDataTypeMapper.cs">
+      <Link>Interfaces\Serialization\IDataTypeMapper.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\Serialization\IEncodingProvider.cs">
+      <Link>Interfaces\Serialization\IEncodingProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\Serialization\IEncodingStack.cs">
+      <Link>Interfaces\Serialization\IEncodingStack.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\Serialization\ISerializationContext.cs">
+      <Link>Interfaces\Serialization\ISerializationContext.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\Serialization\ISerializationProcessor.cs">
+      <Link>Interfaces\Serialization\ISerializationProcessor.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\Serialization\ISerializationSettings.cs">
+      <Link>Interfaces\Serialization\ISerializationSettings.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\Serialization\ISerializer.cs">
+      <Link>Interfaces\Serialization\ISerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Interfaces\Serialization\IStringSerializer.cs">
+      <Link>Interfaces\Serialization\IStringSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\DataTypeMapper.cs">
+      <Link>Serialization\DataTypeMapper.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\EncodingProvider.cs">
+      <Link>Serialization\EncodingProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\EncodingStack.cs">
+      <Link>Serialization\EncodingStack.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\Factory\ComponentFactory.cs">
+      <Link>Serialization\Factory\ComponentFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Factory\DataTypeSerializerFactory.cs">
+      <Link>Serialization\iCalendar\Factory\DataTypeSerializerFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Factory\SerializerFactory.cs">
+      <Link>Serialization\iCalendar\Factory\SerializerFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\iCalLexer.cs">
+      <Link>Serialization\iCalendar\iCalLexer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\iCalParser.cs">
+      <Link>Serialization\iCalendar\iCalParser.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\iCalParserTokenTypes.cs">
+      <Link>Serialization\iCalendar\iCalParserTokenTypes.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Processors\ComponentPropertyConsolidator.cs">
+      <Link>Serialization\iCalendar\Processors\ComponentPropertyConsolidator.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Processors\CompositeProcessor.cs">
+      <Link>Serialization\iCalendar\Processors\CompositeProcessor.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\SerializationInfo.cs">
+      <Link>Serialization\iCalendar\SerializationInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\Components\ComponentSerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\Components\ComponentSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\Components\EventSerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\Components\EventSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\Components\UniqueComponentSerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\Components\UniqueComponentSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\DataMapSerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\DataMapSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\DataTypes\AttachmentSerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\DataTypes\AttachmentSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\DataTypes\AttendeeSerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\DataTypes\AttendeeSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\DataTypes\DataTypeSerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\DataTypes\DataTypeSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\DataTypes\DateTimeSerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\DataTypes\DateTimeSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\DataTypes\EncodableDataTypeSerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\DataTypes\EncodableDataTypeSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\DataTypes\FreeBusyEntrySerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\DataTypes\FreeBusyEntrySerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\DataTypes\GeographicLocationSerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\DataTypes\GeographicLocationSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\DataTypes\OrganizerSerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\DataTypes\OrganizerSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\DataTypes\PeriodListSerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\DataTypes\PeriodListSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\DataTypes\PeriodSerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\DataTypes\PeriodSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\DataTypes\RecurrencePatternSerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\DataTypes\RecurrencePatternSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\DataTypes\RequestStatusSerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\DataTypes\RequestStatusSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\DataTypes\StatusCodeSerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\DataTypes\StatusCodeSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\DataTypes\TriggerSerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\DataTypes\TriggerSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\DataTypes\UTCOffsetSerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\DataTypes\UTCOffsetSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\DataTypes\WeekDaySerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\DataTypes\WeekDaySerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\iCalendarSerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\iCalendarSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\Other\EnumSerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\Other\EnumSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\Other\IntegerSerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\Other\IntegerSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\Other\StringSerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\Other\StringSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\Other\TimeSpanSerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\Other\TimeSpanSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\Other\UriSerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\Other\UriSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\ParameterSerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\ParameterSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\PropertySerializer.cs">
+      <Link>Serialization\iCalendar\Serializers\PropertySerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\iCalendar\Serializers\SerializerBase.cs">
+      <Link>Serialization\iCalendar\Serializers\SerializerBase.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\SerializationContext.cs">
+      <Link>Serialization\SerializationContext.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Serialization\SerializationSettings.cs">
+      <Link>Serialization\SerializationSettings.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Structs\AlarmOccurrence.cs">
+      <Link>Structs\AlarmOccurrence.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Structs\Occurrence.cs">
+      <Link>Structs\Occurrence.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Structs\TimeZoneObservance.cs">
+      <Link>Structs\TimeZoneObservance.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Utility\DateUtil.cs">
+      <Link>Utility\DateUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Utility\KnownTypeHelper.cs">
+      <Link>Utility\KnownTypeHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Utility\RecurrenceUtil.cs">
+      <Link>Utility\RecurrenceUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Utility\SerializationUtil.cs">
+      <Link>Utility\SerializationUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Utility\TextUtil.cs">
+      <Link>Utility\TextUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.iCal\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\DDay.iCal\License.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="project.json" />
+    <None Include="..\DDay.iCal\Serialization\iCalendar\iCal.g" />
+    <!-- A reference to the entire .NET Framework is automatically included -->
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DDay.Collections.DotNet\DDay.Collections.DotNet.csproj">
+      <Project>{ec21cb3c-d548-430c-97c0-f7314743bba5}</Project>
+      <Name>DDay.Collections.DotNet</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <NuGetTargetMoniker>.NETStandard,Version=v1.3</NuGetTargetMoniker>
+  </PropertyGroup>
+</Project>

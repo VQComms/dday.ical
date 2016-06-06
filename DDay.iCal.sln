@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDay.iCal", "DDay.iCal\DDay.iCal.csproj", "{F88DB6D3-CB95-4707-9C88-B53403AADC61}"
 EndProject
@@ -17,6 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "other", "other", "{50CDE5C8
 		release.ps1 = release.ps1
 		Version.txt = Version.txt
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDay.iCal.DotNet", "DDay.iCal.DotNet\DDay.iCal.DotNet.csproj", "{C545F688-AB56-442C-99E0-5C9AA7214F55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDay.Collections.DotNet", "DDay.Collections.DotNet\DDay.Collections.DotNet.csproj", "{EC21CB3C-D548-430C-97C0-F7314743BBA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +40,14 @@ Global
 		{E04EFEB6-4625-4D58-AC91-7B8B8A2C97BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E04EFEB6-4625-4D58-AC91-7B8B8A2C97BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E04EFEB6-4625-4D58-AC91-7B8B8A2C97BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C545F688-AB56-442C-99E0-5C9AA7214F55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C545F688-AB56-442C-99E0-5C9AA7214F55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C545F688-AB56-442C-99E0-5C9AA7214F55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C545F688-AB56-442C-99E0-5C9AA7214F55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC21CB3C-D548-430C-97C0-F7314743BBA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC21CB3C-D548-430C-97C0-F7314743BBA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC21CB3C-D548-430C-97C0-F7314743BBA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC21CB3C-D548-430C-97C0-F7314743BBA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

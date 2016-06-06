@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC21CB3C-D548-430C-97C0-F7314743BBA5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DDay.Collections</RootNamespace>
+    <AssemblyName>DDay.Collections</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\DDay.Collections\DDay.Collections\Constants.cs">
+      <Link>Constants.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.Collections\DDay.Collections\Enumerators\GroupedListEnumerator.cs">
+      <Link>Enumerators\GroupedListEnumerator.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.Collections\DDay.Collections\GroupedList.cs">
+      <Link>GroupedList.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.Collections\DDay.Collections\GroupedValueList.cs">
+      <Link>GroupedValueList.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.Collections\DDay.Collections\Interfaces\IGroupedCollection.cs">
+      <Link>Interfaces\IGroupedCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.Collections\DDay.Collections\Interfaces\IGroupedList.cs">
+      <Link>Interfaces\IGroupedList.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.Collections\DDay.Collections\Interfaces\IGroupedObject.cs">
+      <Link>Interfaces\IGroupedObject.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.Collections\DDay.Collections\Interfaces\IGroupedValueCollection.cs">
+      <Link>Interfaces\IGroupedValueCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.Collections\DDay.Collections\Interfaces\IGroupedValueList.cs">
+      <Link>Interfaces\IGroupedValueList.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.Collections\DDay.Collections\Interfaces\IMultiLinkedList.cs">
+      <Link>Interfaces\IMultiLinkedList.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.Collections\DDay.Collections\Interfaces\IValueObject.cs">
+      <Link>Interfaces\IValueObject.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.Collections\DDay.Collections\Interfaces\Proxies\IGroupedCollectionProxy.cs">
+      <Link>Interfaces\Proxies\IGroupedCollectionProxy.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.Collections\DDay.Collections\Interfaces\Proxies\IGroupedValueListProxy.cs">
+      <Link>Interfaces\Proxies\IGroupedValueListProxy.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.Collections\DDay.Collections\MultiLinkedList.cs">
+      <Link>MultiLinkedList.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.Collections\DDay.Collections\Proxies\GroupedCollectionProxy.cs">
+      <Link>Proxies\GroupedCollectionProxy.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.Collections\DDay.Collections\Proxies\GroupedValueListProxy.cs">
+      <Link>Proxies\GroupedValueListProxy.cs</Link>
+    </Compile>
+    <Compile Include="..\DDay.Collections\DDay.Collections\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="project.json" />
+    <!-- A reference to the entire .NET Framework is automatically included -->
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <NuGetTargetMoniker>.NETStandard,Version=v1.3</NuGetTargetMoniker>
+  </PropertyGroup>
+</Project>
