@@ -17,7 +17,9 @@ namespace antlr
 
     using System;
 
+#if FEATURE_SERIALIZATION
     [Serializable]
+#endif
     public class ANTLRException : Exception
     {
         public ANTLRException()

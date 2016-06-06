@@ -124,8 +124,12 @@ namespace antlr.debug
 				{
 					Monitor.Wait(this);
 				}
-				catch (System.Threading.ThreadInterruptedException)
-				{
+#if !NETCORE
+                catch (System.Threading.ThreadInterruptedException)
+#else
+                finally
+#endif
+                {
 				}
 			}
 		}

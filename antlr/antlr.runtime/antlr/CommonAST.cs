@@ -34,7 +34,7 @@ namespace antlr
 			//down	= another.down;
 			//right	= another.right;
 			ttype	= another.ttype;
-			text	= (another.text==null) ? null : String.Copy(another.text);
+			text	= (another.text==null) ? null : another.text;
 		}
 
 		/*Get the token text for this node */

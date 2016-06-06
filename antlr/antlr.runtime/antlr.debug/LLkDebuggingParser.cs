@@ -1,6 +1,9 @@
 namespace antlr.debug
 {
 	using System;
+#if NETCORE
+    using System.Reflection;
+#endif
 	using System.Threading;
 	using antlr.collections.impl;
 	
@@ -123,9 +126,13 @@ namespace antlr.debug
 				{
 					Monitor.Wait(this);
 				}
-				catch (System.Threading.ThreadInterruptedException)
-				{
-				}
+#if !NETCORE
+                catch (System.Threading.ThreadInterruptedException)
+#else
+                finally
+#endif
+                {
+                }
 			}
 		}
 		public override bool isDebugMode()

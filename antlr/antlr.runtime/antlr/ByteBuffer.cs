@@ -38,7 +38,9 @@ namespace antlr
     {
 
         // char source
+#if FEATURE_SERIALIZATION
         [NonSerialized()]
+#endif
         internal Stream input;
 
         private const int BUF_SIZE = 16;

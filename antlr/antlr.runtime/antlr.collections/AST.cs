@@ -23,7 +23,10 @@ namespace antlr.collections
     /// <summary>
     /// Minimal AST node interface used by ANTLR AST generation and tree-walker.
     /// </summary>
-    public interface AST : ICloneable
+    public interface AST
+#if !NETCORE
+        : ICloneable
+#endif
     {
         /// <summary>
         /// Add a (rightmost) child to this node

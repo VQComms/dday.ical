@@ -5,7 +5,13 @@ using StringBuilder = System.Text.StringBuilder;
 
 using Hashtable = System.Collections.Hashtable;
 using Assembly = System.Reflection.Assembly;
+#if NETCORE
+using System.Linq;
+using EventHandlerList = antlr.runtime.Compatibility.EventHandlerList;
+using Microsoft.Extensions.DependencyModel;
+#else
 using EventHandlerList = System.ComponentModel.EventHandlerList;
+#endif
 
 using BitSet = antlr.collections.impl.BitSet;
 using antlr.debug;
@@ -693,7 +699,11 @@ namespace antlr
         // Override this method to get more specific case handling
         public virtual char toLower(int c)
         {
+#if NETCORE
+            return Char.ToLowerInvariant(Convert.ToChar(c));
+#else
             return Char.ToLower(Convert.ToChar(c), System.Globalization.CultureInfo.InvariantCulture);
+#endif
         }
 
         public virtual void traceIndent()
@@ -764,7 +774,17 @@ namespace antlr
             private void SetTokenType(string tokenTypeName)
             {
                 this.tokenTypeName = tokenTypeName;
-                foreach (Assembly assem in AppDomain.CurrentDomain.GetAssemblies())
+#if NETCORE
+                var context = DependencyContext.Default;
+                var loadedAssemblies = context.RuntimeLibraries
+                    .SelectMany(library => library.GetDefaultAssemblyNames(context))
+                    .Distinct()
+                    .Select(Assembly.Load);
+#else
+            var loadedAssemblies = AppDomain.CurrentDomain.GetAssemblies();
+#endif
+
+                foreach (Assembly assem in loadedAssemblies)
                 {
                     try
                     {

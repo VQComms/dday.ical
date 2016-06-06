@@ -17,7 +17,9 @@ namespace antlr
     // With many thanks to Eric V. Smith from the ANTLR list.
     //
 
+#if FEATURE_SERIALIZATION
     [Serializable]
+#endif
     public class RecognitionException : ANTLRException
     {
         public string fileName; // not used by treeparsers

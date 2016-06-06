@@ -8,6 +8,10 @@ using Debug = System.Diagnostics.Debug;
 using AST = antlr.collections.AST;
 using ASTArray = antlr.collections.impl.ASTArray;
 using ANTLRException = antlr.ANTLRException;
+#if NETCORE
+using System.Linq;
+using Microsoft.Extensions.DependencyModel;
+#endif
 
 namespace antlr
 {
@@ -573,9 +577,19 @@ namespace antlr
             Type nodeTypeObject = null;
             bool typeCreated = false;
 
+#if NETCORE
+            var context = DependencyContext.Default;
+            var loadedAssemblies = context.RuntimeLibraries
+                .SelectMany(library => library.GetDefaultAssemblyNames(context))
+                .Distinct()
+                .Select(Assembly.Load);
+#else
+            var loadedAssemblies = AppDomain.CurrentDomain.GetAssemblies();
+#endif
+
             if (nodeTypeName != null)
             {
-                foreach (Assembly assem in AppDomain.CurrentDomain.GetAssemblies())
+                foreach (Assembly assem in loadedAssemblies)
                 {
                     try
                     {

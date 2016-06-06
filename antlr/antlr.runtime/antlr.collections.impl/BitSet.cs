@@ -36,7 +36,10 @@ namespace antlr.collections.impl
     * @author <br><a href="mailto:pete@yamuna.demon.co.uk">Pete Wells</a>
     */
 
-    public class BitSet : ICloneable
+    public class BitSet
+#if !NETCORE
+        : ICloneable
+#endif
     {
         protected internal const int BITS = 64; // number of bits / long
         protected internal const int NIBBLE = 4;
@@ -140,7 +143,11 @@ namespace antlr.collections.impl
             }
             catch //(System.Exception e)
             {
+#if !NETCORE
                 throw new System.ApplicationException();
+#else
+                throw;
+#endif
             }
             return s;
         }

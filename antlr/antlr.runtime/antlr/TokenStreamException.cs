@@ -21,7 +21,9 @@ namespace antlr
     * Anything that goes wrong while generating a stream of tokens.
     */
 
+#if FEATURE_SERIALIZATION
     [Serializable]
+#endif
     public class TokenStreamException : ANTLRException
     {
         public TokenStreamException()

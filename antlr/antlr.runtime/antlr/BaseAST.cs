@@ -49,7 +49,9 @@ namespace antlr
     * Most people will create ASTs that are subclasses of
     * BaseAST or of CommonAST.
     */
-    [Serializable()]
+#if FEATURE_SERIALIZATION
+    [Serializable]
+#endif
     public abstract class BaseAST : AST
     {
         protected internal BaseAST down;
@@ -368,8 +370,8 @@ namespace antlr
             StringBuilder b = new StringBuilder();
             // if verbose and type name not same as text (keyword probably)
             if (verboseStringConversion &&
-                    (0 != String.Compare(getText(), (tokenNames[Type]), StringComparison.InvariantCultureIgnoreCase)) &&
-                    (0 != String.Compare(getText(), StringUtils.stripFrontBack(tokenNames[Type], @"""", @""""), StringComparison.InvariantCultureIgnoreCase)))
+                    (0 != String.Compare(getText(), (tokenNames[Type]), StringComparison.OrdinalIgnoreCase)) &&
+                    (0 != String.Compare(getText(), StringUtils.stripFrontBack(tokenNames[Type], @"""", @""""), StringComparison.OrdinalIgnoreCase)))
             {
                 b.Append('[');
                 b.Append(getText());

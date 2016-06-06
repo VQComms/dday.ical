@@ -36,7 +36,9 @@ namespace antlr
     public class CharBuffer : InputBuffer
     {
         // char source
+#if FEATURE_SERIALIZATION
         [NonSerialized()]
+#endif
         internal TextReader input;
 
         private const int BUF_SIZE = 16;

@@ -21,7 +21,9 @@ namespace antlr
     /*
     * Wrap an IOException in a CharStreamException
     */
+#if FEATURE_SERIALIZATION
     [Serializable]
+#endif
     public class CharStreamIOException : CharStreamException
     {
         public IOException io;

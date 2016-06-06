@@ -1,5 +1,9 @@
 using System;
-using EventHandlerList			= System.ComponentModel.EventHandlerList;
+#if NETCORE
+using EventHandlerList = antlr.runtime.Compatibility.EventHandlerList;
+#else
+using EventHandlerList = System.ComponentModel.EventHandlerList;
+#endif
 
 using BitSet					= antlr.collections.impl.BitSet;
 using AST						= antlr.collections.AST;
@@ -359,22 +363,22 @@ namespace antlr
 		public virtual void  removeMessageListener(MessageListener l)
 		{
 			if (!ignoreInvalidDebugCalls)
-				throw new System.SystemException("removeMessageListener() is only valid if parser built for debugging");
+				throw new System.Exception("removeMessageListener() is only valid if parser built for debugging");
 		}
 		public virtual void  removeParserListener(ParserListener l)
 		{
 			if (!ignoreInvalidDebugCalls)
-				throw new System.SystemException("removeParserListener() is only valid if parser built for debugging");
+				throw new System.Exception("removeParserListener() is only valid if parser built for debugging");
 		}
 		public virtual void  removeParserMatchListener(ParserMatchListener l)
 		{
 			if (!ignoreInvalidDebugCalls)
-				throw new System.SystemException("removeParserMatchListener() is only valid if parser built for debugging");
+				throw new System.Exception("removeParserMatchListener() is only valid if parser built for debugging");
 		}
 		public virtual void  removeParserTokenListener(ParserTokenListener l)
 		{
 			if (!ignoreInvalidDebugCalls)
-				throw new System.SystemException("removeParserTokenListener() is only valid if parser built for debugging");
+				throw new System.Exception("removeParserTokenListener() is only valid if parser built for debugging");
 		}
 		public virtual void  removeSemanticPredicateListener(SemanticPredicateListener l)
 		{
@@ -389,7 +393,7 @@ namespace antlr
 		public virtual void  removeTraceListener(TraceListener l)
 		{
 			if (!ignoreInvalidDebugCalls)
-				throw new System.SystemException("removeTraceListener() is only valid if parser built for debugging");
+				throw new System.Exception("removeTraceListener() is only valid if parser built for debugging");
 		}
 		
 		/*Parser error-reporting function can be overridden in subclass */
@@ -470,7 +474,7 @@ namespace antlr
 		public virtual void  setDebugMode(bool debugMode)
 		{
 			if (!ignoreInvalidDebugCalls)
-				throw new System.SystemException("setDebugMode() only valid if parser built for debugging");
+				throw new System.Exception("setDebugMode() only valid if parser built for debugging");
 		}
 		public virtual void  setFilename(string f)
 		{

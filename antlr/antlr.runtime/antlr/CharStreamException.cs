@@ -21,7 +21,9 @@ namespace antlr
     * Anything that goes wrong while generating a stream of characters
     */
 
+#if FEATURE_SERIALIZATION
     [Serializable]
+#endif
     public class CharStreamException : ANTLRException
     {
         /*

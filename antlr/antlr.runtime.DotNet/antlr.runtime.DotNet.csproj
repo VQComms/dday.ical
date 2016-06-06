@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{726707E0-4146-4186-B603-482AC680D31B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>antlr.runtime</RootNamespace>
+    <AssemblyName>antlr.runtime</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETCORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETCORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="project.json" />
+    <!-- A reference to the entire .NET Framework is automatically included -->
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\antlr.runtime\antlr.collections.impl\ASTArray.cs">
+      <Link>antlr.collections.impl\ASTArray.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.collections.impl\BitSet.cs">
+      <Link>antlr.collections.impl\BitSet.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.collections\AST.cs">
+      <Link>antlr.collections\AST.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\ANTLREventArgs.cs">
+      <Link>antlr.debug\ANTLREventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\DebuggingCharScanner.cs">
+      <Link>antlr.debug\DebuggingCharScanner.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\DebuggingInputBuffer.cs">
+      <Link>antlr.debug\DebuggingInputBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\DebuggingParser.cs">
+      <Link>antlr.debug\DebuggingParser.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\GuessingEventArgs.cs">
+      <Link>antlr.debug\GuessingEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\ICharScannerDebugSubject.cs">
+      <Link>antlr.debug\ICharScannerDebugSubject.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\IDebugSubject.cs">
+      <Link>antlr.debug\IDebugSubject.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\InputBufferEventArgs.cs">
+      <Link>antlr.debug\InputBufferEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\InputBufferEventSupport.cs">
+      <Link>antlr.debug\InputBufferEventSupport.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\InputBufferListener.cs">
+      <Link>antlr.debug\InputBufferListener.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\InputBufferListenerBase.cs">
+      <Link>antlr.debug\InputBufferListenerBase.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\InputBufferReporter.cs">
+      <Link>antlr.debug\InputBufferReporter.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\IParserDebugSubject.cs">
+      <Link>antlr.debug\IParserDebugSubject.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\Listener.cs">
+      <Link>antlr.debug\Listener.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\LLkDebuggingParser.cs">
+      <Link>antlr.debug\LLkDebuggingParser.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\MessageEventArgs.cs">
+      <Link>antlr.debug\MessageEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\MessageListener.cs">
+      <Link>antlr.debug\MessageListener.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\MessageListenerBase.cs">
+      <Link>antlr.debug\MessageListenerBase.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\NewLineEventArgs.cs">
+      <Link>antlr.debug\NewLineEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\NewLineListener.cs">
+      <Link>antlr.debug\NewLineListener.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\ParserController.cs">
+      <Link>antlr.debug\ParserController.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\ParserEventSupport.cs">
+      <Link>antlr.debug\ParserEventSupport.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\ParserListener.cs">
+      <Link>antlr.debug\ParserListener.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\ParserListenerBase.cs">
+      <Link>antlr.debug\ParserListenerBase.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\ParserMatchEventArgs.cs">
+      <Link>antlr.debug\ParserMatchEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\ParserMatchListener.cs">
+      <Link>antlr.debug\ParserMatchListener.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\ParserMatchListenerBase.cs">
+      <Link>antlr.debug\ParserMatchListenerBase.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\ParserReporter.cs">
+      <Link>antlr.debug\ParserReporter.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\ParserTokenEventArgs.cs">
+      <Link>antlr.debug\ParserTokenEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\ParserTokenListener.cs">
+      <Link>antlr.debug\ParserTokenListener.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\ParserTokenListenerBase.cs">
+      <Link>antlr.debug\ParserTokenListenerBase.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\ParseTreeDebugParser.cs">
+      <Link>antlr.debug\ParseTreeDebugParser.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\ScannerEventSupport.cs">
+      <Link>antlr.debug\ScannerEventSupport.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\SemanticPredicateEventArgs.cs">
+      <Link>antlr.debug\SemanticPredicateEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\SemanticPredicateListener.cs">
+      <Link>antlr.debug\SemanticPredicateListener.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\SemanticPredicateListenerBase.cs">
+      <Link>antlr.debug\SemanticPredicateListenerBase.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\SyntacticPredicateEventArgs.cs">
+      <Link>antlr.debug\SyntacticPredicateEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\SyntacticPredicateListener.cs">
+      <Link>antlr.debug\SyntacticPredicateListener.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\SyntacticPredicateListenerBase.cs">
+      <Link>antlr.debug\SyntacticPredicateListenerBase.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\TraceEventArgs.cs">
+      <Link>antlr.debug\TraceEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\TraceListener.cs">
+      <Link>antlr.debug\TraceListener.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\TraceListenerBase.cs">
+      <Link>antlr.debug\TraceListenerBase.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr.debug\Tracer.cs">
+      <Link>antlr.debug\Tracer.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\ANTLRException.cs">
+      <Link>antlr\ANTLRException.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\ANTLRPanicException.cs">
+      <Link>antlr\ANTLRPanicException.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\ASTFactory.cs">
+      <Link>antlr\ASTFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\ASTNodeCreator.cs">
+      <Link>antlr\ASTNodeCreator.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\ASTNULLType.cs">
+      <Link>antlr\ASTNULLType.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\ASTPair.cs">
+      <Link>antlr\ASTPair.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\ASTVisitor.cs">
+      <Link>antlr\ASTVisitor.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\BaseAST.cs">
+      <Link>antlr\BaseAST.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\ByteBuffer.cs">
+      <Link>antlr\ByteBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\CharBuffer.cs">
+      <Link>antlr\CharBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\CharQueue.cs">
+      <Link>antlr\CharQueue.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\CharScanner.cs">
+      <Link>antlr\CharScanner.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\CharStreamException.cs">
+      <Link>antlr\CharStreamException.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\CharStreamIOException.cs">
+      <Link>antlr\CharStreamIOException.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\CommonAST.cs">
+      <Link>antlr\CommonAST.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\CommonASTWithHiddenTokens.cs">
+      <Link>antlr\CommonASTWithHiddenTokens.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\CommonHiddenStreamToken.cs">
+      <Link>antlr\CommonHiddenStreamToken.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\CommonToken.cs">
+      <Link>antlr\CommonToken.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\DefaultFileLineFormatter.cs">
+      <Link>antlr\DefaultFileLineFormatter.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\DumpASTVisitor.cs">
+      <Link>antlr\DumpASTVisitor.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\FileLineFormatter.cs">
+      <Link>antlr\FileLineFormatter.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\IHiddenStreamToken.cs">
+      <Link>antlr\IHiddenStreamToken.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\InputBuffer.cs">
+      <Link>antlr\InputBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\IToken.cs">
+      <Link>antlr\IToken.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\LexerSharedInputState.cs">
+      <Link>antlr\LexerSharedInputState.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\LLkParser.cs">
+      <Link>antlr\LLkParser.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\MismatchedCharException.cs">
+      <Link>antlr\MismatchedCharException.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\MismatchedTokenException.cs">
+      <Link>antlr\MismatchedTokenException.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\NoViableAltException.cs">
+      <Link>antlr\NoViableAltException.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\NoViableAltForCharException.cs">
+      <Link>antlr\NoViableAltForCharException.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\Parser.cs">
+      <Link>antlr\Parser.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\ParserSharedInputState.cs">
+      <Link>antlr\ParserSharedInputState.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\ParseTree.cs">
+      <Link>antlr\ParseTree.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\ParseTreeRule.cs">
+      <Link>antlr\ParseTreeRule.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\ParseTreeToken.cs">
+      <Link>antlr\ParseTreeToken.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\RecognitionException.cs">
+      <Link>antlr\RecognitionException.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\SemanticException.cs">
+      <Link>antlr\SemanticException.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\StringUtils.cs">
+      <Link>antlr\StringUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\Token.cs">
+      <Link>antlr\Token.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\TokenBuffer.cs">
+      <Link>antlr\TokenBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\TokenCreator.cs">
+      <Link>antlr\TokenCreator.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\TokenQueue.cs">
+      <Link>antlr\TokenQueue.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\TokenStream.cs">
+      <Link>antlr\TokenStream.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\TokenStreamBasicFilter.cs">
+      <Link>antlr\TokenStreamBasicFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\TokenStreamException.cs">
+      <Link>antlr\TokenStreamException.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\TokenStreamHiddenTokenFilter.cs">
+      <Link>antlr\TokenStreamHiddenTokenFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\TokenStreamIOException.cs">
+      <Link>antlr\TokenStreamIOException.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\TokenStreamRecognitionException.cs">
+      <Link>antlr\TokenStreamRecognitionException.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\TokenStreamRetryException.cs">
+      <Link>antlr\TokenStreamRetryException.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\TokenStreamRewriteEngine.cs">
+      <Link>antlr\TokenStreamRewriteEngine.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\TokenStreamSelector.cs">
+      <Link>antlr\TokenStreamSelector.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\TokenWithIndex.cs">
+      <Link>antlr\TokenWithIndex.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\TreeParser.cs">
+      <Link>antlr\TreeParser.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\antlr\TreeParserSharedInputState.cs">
+      <Link>antlr\TreeParserSharedInputState.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\AssemblyInfo.cs">
+      <Link>AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\antlr.runtime\SupportClass.cs">
+      <Link>SupportClass.cs</Link>
+    </Compile>
+    <Compile Include="Compatibility\Component.cs" />
+    <Compile Include="Compatibility\EventHandlerList.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

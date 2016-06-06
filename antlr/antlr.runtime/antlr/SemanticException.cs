@@ -17,7 +17,9 @@ namespace antlr
     // With many thanks to Eric V. Smith from the ANTLR list.
     //
 
+#if FEATURE_SERIALIZATION
     [Serializable]
+#endif
     public class SemanticException : RecognitionException
     {
         public SemanticException(string s)

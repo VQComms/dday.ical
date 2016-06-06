@@ -23,7 +23,9 @@ namespace antlr
     * of stream to re-enter and retry.
     */
 
+#if FEATURE_SERIALIZATION
     [Serializable]
+#endif
     public class TokenStreamRetryException : TokenStreamException
     {
         public TokenStreamRetryException() { }

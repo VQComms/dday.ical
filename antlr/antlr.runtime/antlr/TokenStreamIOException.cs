@@ -21,7 +21,9 @@ namespace antlr
     /*
     * Wraps an IOException in a TokenStreamException
     */
+#if FEATURE_SERIALIZATION
     [Serializable]
+#endif
     public class TokenStreamIOException : TokenStreamException
     {
         public IOException io;

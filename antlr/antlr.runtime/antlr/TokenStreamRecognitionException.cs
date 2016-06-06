@@ -22,7 +22,9 @@ namespace antlr
     * can pass it along.
     */
 
+#if FEATURE_SERIALIZATION
     [Serializable]
+#endif
     public class TokenStreamRecognitionException : TokenStreamException
     {
         public RecognitionException recog;
