@@ -12,7 +12,7 @@ namespace DDay.iCal
     /// <summary>
     /// A class to handle attachments, or URIs as attachments, within an iCalendar. 
     /// </summary>
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class Attachment :

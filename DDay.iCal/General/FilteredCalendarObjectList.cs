@@ -12,7 +12,7 @@ namespace DDay.iCal
     /// <see cref="iCalendar"/> class to maintain a collection of events,
     /// to-do items, journal entries, and free/busy times.
     /// </summary>
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class FilteredCalendarObjectList<T> :

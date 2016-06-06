@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+#if FEATURE_SYSTEM_CONFIGURATION
 using System.Configuration;
+#endif
 using System.Runtime.Serialization;
 
 namespace DDay.iCal
@@ -11,20 +13,20 @@ namespace DDay.iCal
     /// A class that represents an RFC 2445 VALARM component.
     /// FIXME: move GetOccurrences() logic into an AlarmEvaluator.
     /// </summary>    
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class Alarm :
         CalendarComponent,
         IAlarm
     {
-        #region Private Fields
+#region Private Fields
 
         private List<AlarmOccurrence> m_Occurrences;
 
-        #endregion
+#endregion
 
-        #region Public Properties
+#region Public Properties
 
         virtual public AlarmAction Action
         {
@@ -74,9 +76,9 @@ namespace DDay.iCal
             set { Properties.Set("TRIGGER", value); }
         }
 
-        #endregion
+#endregion
 
-        #region Protected Properties
+#region Protected Properties
 
         virtual protected List<AlarmOccurrence> Occurrences
         {
@@ -84,9 +86,9 @@ namespace DDay.iCal
             set { m_Occurrences = value; }
         }
 
-        #endregion
+#endregion
 
-        #region Constructors
+#region Constructors
 
         public Alarm()
         {
@@ -99,9 +101,9 @@ namespace DDay.iCal
             Occurrences = new List<AlarmOccurrence>();
         }
 
-        #endregion                
+#endregion
 
-        #region Public Methods
+#region Public Methods
 
         /// <summary>
         /// Gets a list of alarm occurrences for the given recurring component, <paramref name="rc"/>
@@ -179,9 +181,9 @@ namespace DDay.iCal
             return Results;
         }
 
-        #endregion
+#endregion
 
-        #region Protected Methods
+#region Protected Methods
 
         /// <summary>
         /// Handles the repetitions that occur from the <c>REPEAT</c> and
@@ -207,9 +209,9 @@ namespace DDay.iCal
             }
         }
 
-        #endregion
+#endregion
 
-        #region Overrides
+#region Overrides
 
         protected override void OnDeserializing(StreamingContext context)
         {
@@ -218,6 +220,6 @@ namespace DDay.iCal
             Initialize();
         }
 
-        #endregion
+#endregion
     }
 }

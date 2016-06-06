@@ -8,11 +8,11 @@ using DDay.iCal.Serialization;
 using DDay.iCal.Serialization.iCalendar;
 
 namespace DDay.iCal
-{    
+{
     /// <summary>
     /// An iCalendar status code.
     /// </summary>
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class StatusCode : 

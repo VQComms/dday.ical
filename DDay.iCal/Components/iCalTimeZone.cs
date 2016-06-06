@@ -1,7 +1,9 @@
 using System;
 using System.Data;
 using System.Collections;
+#if FEATURE_SYSTEM_CONFIGURATION
 using System.Configuration;
+#endif
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Globalization;
@@ -13,7 +15,7 @@ namespace DDay.iCal
     /// <summary>
     /// A class that represents an RFC 5545 VTIMEZONE component.
     /// </summary>
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public partial class iCalTimeZone :
@@ -22,7 +24,7 @@ namespace DDay.iCal
     {
         #region Static Public Methods
 
-#if !SILVERLIGHT
+#if !SILVERLIGHT && !NETCORE
         static public iCalTimeZone FromLocalTimeZone()
         {
             return FromSystemTimeZone(System.TimeZoneInfo.Local);

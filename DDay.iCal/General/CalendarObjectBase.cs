@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 
 namespace DDay.iCal
 {
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class CalendarObjectBase :
@@ -67,8 +67,10 @@ namespace DDay.iCal
         {
             get { return m_IsLoaded; }
         }
-        
-        [field:NonSerialized]
+
+#if FEATURE_SERIALIZATION
+        [field: NonSerialized]
+#endif
         public event EventHandler Loaded;
 
         virtual public void OnLoaded()

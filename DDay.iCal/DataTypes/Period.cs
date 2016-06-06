@@ -10,7 +10,7 @@ namespace DDay.iCal
     /// <summary>
     /// Represents an iCalendar period of time.
     /// </summary>    
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class Period :

@@ -1,16 +1,18 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+#if FEATURE_SERIALIZATION
 using System.Runtime.Serialization;
-using System.Collections;
+#endif
 
 namespace DDay.Collections
 {
     /// <summary>
     /// A proxy for a keyed list.
     /// </summary>
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class GroupedValueListProxy<TGroup, TInterface, TItem, TOriginalValue, TNewValue> :

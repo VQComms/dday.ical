@@ -11,7 +11,7 @@ namespace DDay.iCal
     /// <summary>
     /// Represents an RFC 5545 "BYDAY" value.
     /// </summary>
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class WeekDay : 

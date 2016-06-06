@@ -11,7 +11,7 @@ namespace DDay.iCal
     /// <summary>
     /// Represents a time offset from UTC (Coordinated Universal Time).
     /// </summary>
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class UTCOffset : 

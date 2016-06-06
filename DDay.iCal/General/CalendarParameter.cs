@@ -7,8 +7,8 @@ using System.Diagnostics;
 using DDay.Collections;
 
 namespace DDay.iCal
-{   
-#if !SILVERLIGHT
+{
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class CalendarParameter : 
@@ -93,7 +93,9 @@ namespace DDay.iCal
 
         #region IValueObject<string> Members
 
-        [field:NonSerialized]
+#if FEATURE_SERIALIZATION
+        [field: NonSerialized]
+#endif
         public event EventHandler<ValueChangedEventArgs<string>> ValueChanged;
 
         protected void OnValueChanged(IEnumerable<string> removedValues, IEnumerable<string> addedValues)

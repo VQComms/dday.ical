@@ -16,7 +16,7 @@ namespace DDay.iCal
     /// class handles time zone differences, and integrates seamlessly into the iCalendar framework.
     /// </remarks>
     /// </summary>
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public sealed class iCalDateTime :

@@ -87,7 +87,7 @@ namespace DDay.iCal
     /// </code>
     /// </para>
     /// </remarks>
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class iCalendar :

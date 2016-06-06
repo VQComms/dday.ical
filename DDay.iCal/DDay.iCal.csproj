@@ -46,7 +46,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;DATACONTRACT</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;DATACONTRACT FEATURE_SERIALIZATION FEATURE_SYSTEM_CONFIGURATION</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Debug\DDay.iCal.XML</DocumentationFile>
@@ -57,7 +57,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>TRACE;DATACONTRACT FEATURE_SERIALIZATION FEATURE_SYSTEM_CONFIGURATION</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Release\DDay.iCal.XML</DocumentationFile>

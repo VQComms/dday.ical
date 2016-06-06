@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 
 namespace DDay.iCal
 {
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class Attendee :

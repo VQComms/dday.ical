@@ -8,7 +8,7 @@ namespace DDay.iCal
     /// <summary>
     /// An abstract class from which all iCalendar data types inherit.
     /// </summary>
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class EncodableDataType :

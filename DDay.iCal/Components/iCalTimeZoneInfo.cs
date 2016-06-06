@@ -2,17 +2,19 @@ using System;
 using System.Data;
 using System.Collections;
 using System.Collections.Generic;
+#if FEATURE_SYSTEM_CONFIGURATION
 using System.Configuration;
+#endif
 using System.Linq;
 using System.Runtime.Serialization;
 
 namespace DDay.iCal
-{    
+{
     /// <summary>
     /// A class that contains time zone information, and is usually accessed
     /// from an iCalendar object using the <see cref="DDay.iCal.iCalendar.GetTimeZone"/> method.        
     /// </summary>
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class iCalTimeZoneInfo : 

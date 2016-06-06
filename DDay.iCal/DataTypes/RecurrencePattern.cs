@@ -12,7 +12,7 @@ namespace DDay.iCal
     /// <summary>
     /// An iCalendar representation of the <c>RRULE</c> property.
     /// </summary>
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public partial class RecurrencePattern :
@@ -21,7 +21,7 @@ namespace DDay.iCal
     {
         #region Private Fields
 
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
         [NonSerialized]
 #endif
         private FrequencyType _Frequency;

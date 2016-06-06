@@ -13,7 +13,7 @@ namespace DDay.iCal
     /// A class that represents the organizer of an event/todo/journal.
     /// </summary>
     [DebuggerDisplay("{Value}")]
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class Organizer :

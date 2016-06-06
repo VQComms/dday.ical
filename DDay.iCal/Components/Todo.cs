@@ -3,7 +3,9 @@ using System.Diagnostics;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+#if FEATURE_SYSTEM_CONFIGURATION
 using System.Configuration;
+#endif
 using System.Runtime.Serialization;
 
 namespace DDay.iCal
@@ -12,7 +14,7 @@ namespace DDay.iCal
     /// A class that represents an RFC 5545 VTODO component.
     /// </summary> 
     [DebuggerDisplay("{Summary} - {Status}")]
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class Todo : 

@@ -12,7 +12,7 @@ namespace DDay.iCal
     /// <summary>
     /// A collection of calendar objects.
     /// </summary>
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class CalendarObjectList :

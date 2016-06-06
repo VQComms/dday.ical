@@ -13,7 +13,7 @@ namespace DDay.iCal
     /// <see cref="Event"/> or <see cref="Todo"/> item.
     /// </summary>
     [DebuggerDisplay("{Latitude};{Longitude}")]
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class GeographicLocation :

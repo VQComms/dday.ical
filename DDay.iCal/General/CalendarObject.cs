@@ -12,7 +12,7 @@ namespace DDay.iCal
     /// <summary>
     /// The base class for all iCalendar objects and components.
     /// </summary>
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class CalendarObject :
@@ -278,7 +278,9 @@ namespace DDay.iCal
 
         #region IGroupedObject Members
 
+#if FEATURE_SERIALIZATION
         [field: NonSerialized]
+#endif
         public event EventHandler<ObjectEventArgs<string, string>> GroupChanged;
 
         protected void OnGroupChanged(string @old, string @new)

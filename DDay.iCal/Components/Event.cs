@@ -19,7 +19,7 @@ namespace DDay.iCal
     ///         <item>Create a TextCollection DataType for 'text' items separated by commas</item>
     ///     </list>
     /// </note>
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]    
 #endif
     public class Event : 

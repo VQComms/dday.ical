@@ -2,28 +2,30 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+#if FEATURE_SERIALIZATION
 using System.Runtime.Serialization;
+#endif
 
 namespace DDay.Collections
 {
     /// <summary>
     /// A list of objects that are keyed.
     /// </summary>
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class GroupedList<TGroup, TItem> :
         IGroupedList<TGroup, TItem>
         where TItem : class, IGroupedObject<TGroup>
     {
-        #region Protected Fields
+#region Protected Fields
 
         List<IMultiLinkedList<TItem>> _Lists = new List<IMultiLinkedList<TItem>>();
         Dictionary<TGroup, IMultiLinkedList<TItem>> _Dictionary = new Dictionary<TGroup, IMultiLinkedList<TItem>>();
 
-        #endregion
+#endregion
 
-        #region Private Methods
+#region Private Methods
 
         TItem SubscribeToKeyChanges(TItem item)
         {
@@ -39,9 +41,9 @@ namespace DDay.Collections
             return item;
         }
 
-        #endregion
+#endregion
 
-        #region Protected Methods
+#region Protected Methods
 
         virtual protected TGroup GroupModifier(TGroup group)
         {
@@ -51,9 +53,9 @@ namespace DDay.Collections
             return group;
         }
 
-        #endregion
+#endregion
 
-        #region Private Methods
+#region Private Methods
 
         IMultiLinkedList<TItem> EnsureList(TGroup group, bool createIfNecessary)
         {
@@ -99,9 +101,9 @@ namespace DDay.Collections
             return null;
         }
 
-        #endregion
+#endregion
 
-        #region Event Handlers
+#region Event Handlers
 
         void item_GroupChanged(object sender, ObjectEventArgs<TGroup, TGroup> e)
         {
@@ -144,14 +146,18 @@ namespace DDay.Collections
             }
         }
 
-        #endregion
+#endregion
 
-        #region IGroupedList<TGroup, TObject> Members
+#region IGroupedList<TGroup, TObject> Members
 
+#if FEATURE_SERIALIZATION
         [field: NonSerialized]
+#endif
         public event EventHandler<ObjectEventArgs<TItem, int>> ItemAdded;
 
+#if FEATURE_SERIALIZATION
         [field: NonSerialized]
+#endif
         public event EventHandler<ObjectEventArgs<TItem, int>> ItemRemoved;
 
         protected void OnItemAdded(TItem obj, int index)
@@ -337,9 +343,9 @@ namespace DDay.Collections
             }
         }
         
-        #endregion
+#endregion
 
-        #region ICollection<TObject> Members
+#region ICollection<TObject> Members
 
         virtual public bool Contains(TItem item)
         {
@@ -359,9 +365,9 @@ namespace DDay.Collections
             get { return false; }
         }
 
-        #endregion
+#endregion
 
-        #region IList<TObject> Members
+#region IList<TObject> Members
 
         virtual public void Insert(int index, TItem item)
         {
@@ -412,24 +418,24 @@ namespace DDay.Collections
             }
         }
 
-        #endregion
+#endregion
 
-        #region IEnumerable<U> Members
+#region IEnumerable<U> Members
 
         public IEnumerator<TItem> GetEnumerator()
         {
             return new GroupedListEnumerator<TItem>(_Lists);
         }
 
-        #endregion
+#endregion
 
-        #region IEnumerable Members
+#region IEnumerable Members
 
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
         {
             return new GroupedListEnumerator<TItem>(_Lists);
         }
 
-        #endregion
+#endregion
     }    
 }

@@ -29,7 +29,7 @@ namespace DDay.iCal
     /// and X-properties may be applied to calendar components.
     /// </remarks>
     [DebuggerDisplay("{Name}:{Value}")]
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class CalendarProperty :
@@ -155,7 +155,9 @@ namespace DDay.iCal
 
         #region IValueObject<object> Members
 
+#if FEATURE_SERIALIZATION
         [field: NonSerialized]
+#endif
         public event EventHandler<ValueChangedEventArgs<object>> ValueChanged;
 
         protected void OnValueChanged(object removedValue, object addedValue)

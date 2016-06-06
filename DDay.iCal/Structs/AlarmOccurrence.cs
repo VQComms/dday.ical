@@ -13,7 +13,7 @@ namespace DDay.iCal
     /// the alarm occurs, the <see cref="Alarm"/> that fired, and the 
     /// component on which the alarm fired.
     /// </remarks>
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public struct AlarmOccurrence : 

@@ -13,7 +13,7 @@ namespace DDay.iCal
     /// <summary>
     /// A class that represents the return status of an iCalendar request.
     /// </summary>
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class RequestStatus :

@@ -12,7 +12,7 @@ namespace DDay.iCal
     /// <summary>
     /// An iCalendar list of recurring dates (or date exclusions)
     /// </summary>
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class PeriodList : 

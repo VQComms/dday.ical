@@ -25,6 +25,7 @@
     <DefineConstants>TRACE;DEBUG;NETCORE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <NoWarn>1572,1573,1574,1591,1734</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,6 +34,7 @@
     <DefineConstants>TRACE;NETCORE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <NoWarn>1572,1573,1574,1591,1734</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="..\DDay.iCal\Compatibility\BrowsableAttribute.cs">

@@ -1,7 +1,9 @@
 using System;
 using System.Diagnostics;
 using System.Data;
+#if FEATURE_SYSTEM_CONFIGURATION
 using System.Configuration;
+#endif
 using DDay.iCal;
 using DDay.iCal.Serialization;
 using System.Collections.Generic;
@@ -12,7 +14,7 @@ namespace DDay.iCal
     /// <summary>
     /// A class that represents an RFC 5545 VJOURNAL component.
     /// </summary>
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class Journal : 

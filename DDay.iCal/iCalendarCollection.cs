@@ -9,7 +9,7 @@ namespace DDay.iCal
     /// <summary>
     /// A list of iCalendars.
     /// </summary>
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class iCalendarCollection :

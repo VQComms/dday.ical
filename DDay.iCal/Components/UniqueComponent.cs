@@ -12,7 +12,7 @@ namespace DDay.iCal
     /// Represents a unique component, a component with a unique UID,
     /// which can be used to uniquely identify the component.    
     /// </summary>
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class UniqueComponent : 

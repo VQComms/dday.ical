@@ -15,7 +15,7 @@ namespace DDay.iCal
     /// RRULEs, RDATE, EXRULEs, and EXDATEs, as well as the DTSTART
     /// for the recurring item (all recurring items must have a DTSTART).
     /// </remarks>
-#if !SILVERLIGHT
+#if FEATURE_SERIALIZATION
     [Serializable]
 #endif
     public class RecurringComponent : 
