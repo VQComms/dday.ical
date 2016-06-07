@@ -401,15 +401,26 @@ _loop26_breakloop:			;
 			{
 				n = LT(1);
 				match(IANA_TOKEN);
+#if !NETCORE
 				c = cf.Build(n.getText().ToLower(), true);
+#else
+				// FormatterServices.GetUninitializedObject is not yet available on .NET Core
+				c = cf.Build(n.getText().ToLower(), false);
+#endif
 				break;
 			}
 			case X_NAME:
 			{
 				m = LT(1);
 				match(X_NAME);
+#if !NETCORE
 				c = cf.Build(m.getText().ToLower(), true);
-				break;
+#else
+				// FormatterServices.GetUninitializedObject is not yet available on .NET Core
+				c = cf.Build(m.getText().ToLower(), false);
+#endif
+
+                            break;
 			}
 			default:
 			{
