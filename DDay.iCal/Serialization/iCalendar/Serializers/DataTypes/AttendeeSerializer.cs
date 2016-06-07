@@ -34,7 +34,7 @@ namespace DDay.iCal.Serialization.iCalendar
                     string uriString = Unescape(Decode(a, value));
 
                     // Prepend "mailto:" if necessary
-                    if (!uriString.StartsWith("mailto:", StringComparison.InvariantCultureIgnoreCase))
+                    if (!uriString.StartsWith("mailto:", StringComparison.OrdinalIgnoreCase))
                         uriString = "mailto:" + uriString;
 
                     a.Value = new Uri(uriString);

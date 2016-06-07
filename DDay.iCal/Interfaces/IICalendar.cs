@@ -84,9 +84,9 @@ namespace DDay.iCal
         /// <summary>
         /// Gets a list of To-do items contained in the calendar.
         /// </summary>
-        IUniqueComponentList<ITodo> Todos { get; }        
+        IUniqueComponentList<ITodo> Todos { get; }
 
-#if !SILVERLIGHT
+#if !SILVERLIGHT && !NETCORE
         /// <summary>
         /// Adds a system time zone to the iCalendar.  This time zone may
         /// then be used in date/time objects contained in the 

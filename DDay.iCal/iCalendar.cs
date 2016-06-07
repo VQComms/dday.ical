@@ -589,7 +589,7 @@ namespace DDay.iCal
             return tz;
         }
 
-#if !SILVERLIGHT
+#if !SILVERLIGHT && !NETCORE
         /// <summary>
         /// Adds a system time zone to the iCalendar.  This time zone may
         /// then be used in date/time objects contained in the 

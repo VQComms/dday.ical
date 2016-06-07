@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Collections;
+#if NETCORE
+using System.Reflection;
+#endif
 
 namespace DDay.iCal.Serialization.iCalendar
 {

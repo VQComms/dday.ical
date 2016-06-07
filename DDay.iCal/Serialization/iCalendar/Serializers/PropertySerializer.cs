@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
+#if NETCORE
+using System.Reflection;
+#endif
 using System.Text;
 using System.IO;
 using System.Collections;

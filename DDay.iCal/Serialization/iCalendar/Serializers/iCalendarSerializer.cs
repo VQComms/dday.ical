@@ -126,9 +126,9 @@ namespace DDay.iCal.Serialization.iCalendar
                 else
                 {
                     // Alphabetize all properties except VERSION, which should appear first. 
-                    if (string.Equals("VERSION", x.Name, StringComparison.InvariantCultureIgnoreCase))
+                    if (string.Equals("VERSION", x.Name, StringComparison.OrdinalIgnoreCase))
                         return -1;
-                    else if (string.Equals("VERSION", y.Name, StringComparison.InvariantCultureIgnoreCase))
+                    else if (string.Equals("VERSION", y.Name, StringComparison.OrdinalIgnoreCase))
                         return 1;
                     return string.Compare(x.Name, y.Name);
                 }
