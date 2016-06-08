@@ -1,3 +1,29 @@
+# DDay.iCal
+
+## How to build
+
+Build `antlr/antlr.net-runtime.sln`
+
+Build `DDay.iCal.sln` 
+
+## CoreCLR
+
+Run `nuget pack antlr.runtime.DotNet.nuspec`
+Run `nuget pack DDay.Collections.DotNet.nuspec`
+Run `nuget pack DDay.iCal.DotNet.nuspec`
+
+Publish the resulting *.nupkg to a nuget feed or use your filesystem as a nuget feed.
+
+In your consuming CoreCLR app add the following (replacing any relevant version numbers where needed):
+
+```
+    "dependencies": {
+        "DDay.iCal-netcore": "1.1.0-alpha",
+     }
+```
+
+## Original README
+
 DDay.iCal is an iCalendar (RFC2445) class library for .NET 2.0 and
 above. It's aimed at providing full RFC 2445 compliance, while providing
 full compatibility with popular calendaring applications.
