@@ -21,7 +21,7 @@
     <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
     <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
     <FileUpgradeFlags>40</FileUpgradeFlags>
-    <UpgradeBackupLocation>C:\github\VQComms\dday.ical\antlr\Backup1\antlr.runtime\</UpgradeBackupLocation>
+    <UpgradeBackupLocation>C:\Projects\dday.ical\antlr\Backup1\antlr.runtime\</UpgradeBackupLocation>
     <OldToolsVersion>14.0</OldToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

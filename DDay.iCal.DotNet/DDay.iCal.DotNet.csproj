@@ -540,6 +540,17 @@
     <None Include="..\DDay.iCal\Serialization\iCalendar\iCal.g" />
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="antlr.runtime">
+      <HintPath>..\antlr\antlr.runtime.DotNet\bin\Debug\antlr.runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DDay.Collections.DotNet\DDay.Collections.DotNet.csproj">
+      <Project>{ec21cb3c-d548-430c-97c0-f7314743bba5}</Project>
+      <Name>DDay.Collections.DotNet</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
