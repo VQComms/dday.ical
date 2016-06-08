@@ -9,7 +9,9 @@ Build `DDay.iCal.sln`
 ## CoreCLR
 
 Run `nuget pack antlr.runtime.DotNet.nuspec`
+
 Run `nuget pack DDay.Collections.DotNet.nuspec`
+
 Run `nuget pack DDay.iCal.DotNet.nuspec`
 
 Publish the resulting *.nupkg to a nuget feed or use your filesystem as a nuget feed.
